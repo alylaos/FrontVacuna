@@ -8,6 +8,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { SedesComponent } from './sedes/sedes.component';
 import { RecordatorioComponent } from './recordatorio/recordatorio.component';
 import { VacunasComponent } from './vacunas/vacunas.component';
+import { CitasComponent } from './citas/citas.component';
 
 export const routes: Routes = [
     {path: "list", component: ProductListComponent},
@@ -17,7 +18,8 @@ export const routes: Routes = [
     {path: "cliente", component: ClienteComponent},
     { path: "sedes", component: SedesComponent },
     { path: "recordatorio", component: RecordatorioComponent },
-    { path: 'vacunas', component: VacunasComponent },
+    { path: "vacunas", component: VacunasComponent },
+    { path: "citas", component: CitasComponent },
     {path: '', redirectTo: '/home', pathMatch: "full"},
     {path: '**', component: PageNotFoundComponent}
 ];
