@@ -1,0 +1,16 @@
+.footer {
+    background-color: #b2c2f1; /* Color de fondo */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  

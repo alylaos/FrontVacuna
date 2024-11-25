@@ -1,0 +1,50 @@
+<div class="cardbg-light w-75 mx-auto">
+    <div class="card-header">Centros de Vacunación</div>
+  
+    <mat-label>Filtrar por: </mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Centro de Salud" #input>
+  
+    <div class="card-body">
+      <div class="cardborder-dark mb-3">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+          
+          <!-- Column for Id -->
+          <ng-container matColumnDef="idCentro">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+            <td mat-cell *matCellDef="let element">{{ element.idCentro }} </td>
+          </ng-container>
+  
+          <!-- Column for Name -->
+          <ng-container matColumnDef="nombrecentro">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+            <td mat-cell *matCellDef="let element">{{ element.nombrecentro }} </td>
+          </ng-container>
+  
+          <!-- Column for Address -->
+          <ng-container matColumnDef="direccion">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Dirección </th>
+            <td mat-cell *matCellDef="let element">{{ element.direccion }} </td>
+          </ng-container>
+  
+          <!-- Column for Phone -->
+          <ng-container matColumnDef="telefono">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Teléfono </th>
+            <td mat-cell *matCellDef="let element">{{ element.telefono }} </td>
+          </ng-container>
+  
+          <!-- Column for Vaccine Types -->
+          <ng-container matColumnDef="tipo_vacuna">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de Vacuna </th>
+            <td mat-cell *matCellDef="let element">{{ element.tipo_vacuna }} </td>
+          </ng-container>
+  
+          <!-- Header and Rows -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+        <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+  
