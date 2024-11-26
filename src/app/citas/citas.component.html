@@ -1,0 +1,70 @@
+<div class="container mt-4">
+    <h2>Citas Médicas</h2>
+  
+    <!-- Formulario para registrar cita -->
+    <!-- <form [formGroup]="citaForm" (ngSubmit)="registrarCita()" class="mb-4">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Tipo de Vacuna</mat-label>
+        <input matInput formControlName="tipoVacuna" placeholder="Ejemplo: Pfizer">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Fecha de Vacunación</mat-label>
+        <input matInput type="date" formControlName="fechaVacunacion">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Dosis</mat-label>
+        <input matInput type="number" formControlName="dosis" min="1">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Sede</mat-label>
+        <input matInput formControlName="sede" placeholder="Ejemplo: Centro de Salud">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Estado</mat-label>
+        <input matInput formControlName="estado" placeholder="Ejemplo: Pendiente">
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="citaForm.invalid">Registrar Cita</button>
+    </form>
+   -->
+    <!-- Tabla de citas -->
+    <table mat-table [dataSource]="citas" class="mat-elevation-z8 w-100">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.id }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="tipoVacuna">
+        <th mat-header-cell *matHeaderCellDef> Tipo Vacuna </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.tipoVacuna }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="fechaVacunacion">
+        <th mat-header-cell *matHeaderCellDef> Fecha Vacunación </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.fechaVacunacion }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="dosis">
+        <th mat-header-cell *matHeaderCellDef> Dosis </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.dosis }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="sede">
+        <th mat-header-cell *matHeaderCellDef> Sede </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.sede }} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef> Estado </th>
+        <td mat-cell *matCellDef="let cita"> {{ cita.estado }} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['id', 'tipoVacuna', 'fechaVacunacion', 'dosis', 'sede', 'estado']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'tipoVacuna', 'fechaVacunacion', 'dosis', 'sede', 'estado'];"></tr>
+    </table>
+  </div>
+  

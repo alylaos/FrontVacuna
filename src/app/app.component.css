@@ -1,0 +1,34 @@
+.nav {
+    background-color: #b2c2f1; /* Color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+.layout {
+    display: flex;
+    
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .registro, .sedes {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    width: 45%;
+  }
+  
+  .recordatorio {
+    margin-top: 20px;
+    background: #fff3cd;
+    padding: 10px;
+    border-left: 5px solid #ffeeba;
+  }
+  
